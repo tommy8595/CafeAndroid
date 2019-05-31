@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rv_item_touch_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="12dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/ivProductCover"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ice Matcha"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+    <TextView
+        android:id="@+id/tvProductCate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ice"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.50 USD"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorBrown"/>
+
+</LinearLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="title_product">Product</string>
+    <string name="title_card">Select Cards</string>
+    <string name="title_promotion">Promotion</string>
+    <string name="title_store">Store</string>
+    <string name="title_history">History</string>
+    <string name="cart">Cart</string>
 </resources>

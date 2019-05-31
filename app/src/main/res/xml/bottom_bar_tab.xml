@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab id="@+id/tabCard"
+        title="MyCard"
+        icon="@drawable/ic_credit_card"/>
+
+    <tab id="@+id/tabProduct"
+        title="Product"
+        icon="@drawable/ic_shopping_bag"/>
+
+    <tab id="@+id/tabPromotion"
+        title="Promotion"
+        icon="@drawable/ic_megaphone"/>
+
+    <tab id="@+id/tabStore"
+        title="Store"
+        icon="@drawable/ic_store"/>
+
+    <tab id="@+id/tabHistory"
+        title="History"
+        icon="@drawable/ic_time"/>
+</tabs>
