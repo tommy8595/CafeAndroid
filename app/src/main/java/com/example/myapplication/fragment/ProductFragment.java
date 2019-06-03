@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,12 +16,18 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.adapter.ImagePageAdapter;
 import com.example.myapplication.adapter.ProductAdapter;
+
+import java.util.ArrayList;
 
 public class ProductFragment extends Fragment {
 
     RecyclerView mRvProduct;
     ProductAdapter mProductAdapter;
+    ViewPager mViewPager;
+    ImagePageAdapter mImgPageAdapter = null;
+
     private static final int SPAN_COUNT = 2;
 
     @Nullable
@@ -32,9 +39,20 @@ public class ProductFragment extends Fragment {
         setHasOptionsMenu(true);
 
         mRvProduct = (RecyclerView)rootView.findViewById(R.id.productRecyclerView);
+        mViewPager = (ViewPager)rootView.findViewById(R.id.viewPager);
 
+        setupImageSlide();
 
         return rootView;
+    }
+
+    private void setupImageSlide(){
+        mImgPageAdapter = new ImagePageAdapter(getFragmentManager(),new ArrayList<Integer>(){{
+            add(R.drawable.cafe1);
+            add(R.drawable.cafe2);
+            add(R.drawable.cafe3);
+        }});
+        mViewPager.setAdapter(mImgPageAdapter);
     }
 
     @Override

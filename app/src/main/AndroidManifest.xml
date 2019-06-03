@@ -23,6 +23,12 @@
                 android:value=".MainActivity"/>
         </activity>
 
+        <activity android:name=".cards.EarnPointActivity"
+            android:parentActivityName=".CardsActivity">
+            <meta-data android:value=".CardsActivity"
+                android:name="android.support.PARENT_ACTIVITY"/>
+        </activity>
+
     </application>
 
 </manifest>

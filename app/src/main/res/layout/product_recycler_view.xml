@@ -1,13 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/productRecyclerView"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</FrameLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp">
+
+                </android.support.v4.view.ViewPager>
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/pageIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:piv_count="2"
+                    app:piv_orientation="horizontal"
+                    app:piv_dynamicCount="true"
+                    app:piv_radius="5dp"
+                    app:piv_animationType="slide"
+                    app:piv_selectedColor="#fff"
+                    app:piv_unselectedColor="@color/colorGrey"
+                    app:piv_viewPager="@id/viewPager"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="8dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorBrown"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnCateHot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cate_hot"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#f7e5c8"
+                    android:textColor="#595754"/>
+
+                <Button
+                    android:id="@+id/btnCateIced"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cate_iced"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#f7e5c8"
+                    android:textColor="#595754"/>
+
+                <Button
+                    android:id="@+id/btnCateFrappe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cate_frappe"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#f7e5c8"
+                    android:textColor="#595754"/>
+
+                <Button
+                    android:id="@+id/btnCateOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cate_other"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#f7e5c8"
+                    android:textColor="#595754"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvViewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_more"
+                android:layout_gravity="end"
+                android:layout_marginEnd="26dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:enabled="true"
+                android:textAlignment="center"
+                android:textColorLink="@color/colorBrown"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/productRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:nestedScrollingEnabled="false">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

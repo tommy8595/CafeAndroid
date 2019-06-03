@@ -7,4 +7,21 @@
     <string name="title_store">Store</string>
     <string name="title_history">History</string>
     <string name="cart">Cart</string>
+
+    <string name="description">Description</string>
+
+    <string name="earn_point_card">Earn Point Card</string>
+    <string name="apply_now">Apply Now</string>
+    <string name="from">From</string>
+    <string name="cash">10.00 USD</string>
+    <string name="valid_until">Valid Until</string>
+    <string name="date">2019 &#8211; 12 &#8211; 31</string>
+    <string name="earn_rules">Earn Rules</string>
+    <string name="view_more"><a href="#">View More >></a></string>
+
+    <string name="category">Category</string>
+    <string name="cate_hot">Hot</string>
+    <string name="cate_iced">Iced</string>
+    <string name="cate_frappe">Frappe</string>
+    <string name="cate_other">Other</string>
 </resources>
