@@ -1,72 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
-    <!--TOP-->
-    <android.support.v7.widget.LinearLayoutCompat
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content">
 
-        android:background="@drawable/food_red">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Member"
-            android:textSize="30dp"/>
-
-    </android.support.v7.widget.LinearLayoutCompat>
-    <!--DOWN-->
-    <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="422dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="288dp"
-        android:orientation="vertical">
-        <!--Description-->
-        <android.support.v7.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="150dp">
 
-            <TextView
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="320dp"
+                android:background="@drawable/food_red"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <com.alexzh.circleimageview.CircleImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/discount"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"/>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="VEMBERS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="17dp"
+                    android:text="10% off"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="320dp"
+                android:src="@drawable/food_red"
+                android:layout_margin="16dp"
+                android:background="#ccc"
+                android:contentDescription="@string/app_name"
+                android:scaleType="center"/>-->
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="35dp"
-                android:text="Description" />
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="35dp"
+                    android:background="@color/colorBrown"
+                    android:rotation="180"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/description"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:background="@color/colorGrey"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/discount_description"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description" />
+                android:orientation="horizontal"
+                android:layout_marginTop="65dp">
 
-        </android.support.v7.widget.LinearLayoutCompat>
-        <!--Earn Rule-->
-        <android.support.v7.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="35dp"
+                    android:background="@color/colorBrown"
+                    android:rotation="180"
+                    android:layout_marginStart="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/earn_rules"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:background="@color/colorGrey"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="35dp"
-                android:text="Earn Rule" />
+                android:text="Get 1 point(s) for any purchase"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#000"/>
 
-            <TextView
-                android:layout_width="match_parent"
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Earn Rule" />
-        </android.support.v7.widget.LinearLayoutCompat>
-        <!--button apply-->
-        <Button
-            android:layout_width="110dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:text="Apply Now" />
-    </android.support.v7.widget.LinearLayoutCompat>
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp">
 
-</RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cash"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_marginStart="55dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valid_until"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_marginStart="20dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnApplyNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_now"
+                android:layout_marginTop="45dp"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="26dp"
+                android:paddingEnd="26dp"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -9,7 +9,7 @@
     <string name="cart">Cart</string>
 
     <string name="description">Description</string>
-
+    <string name="discount_description">Discount</string>
     <string name="earn_point_card">Earn Point Card</string>
     <string name="apply_now">Apply Now</string>
     <string name="from">From</string>
