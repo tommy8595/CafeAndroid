@@ -8,6 +8,15 @@
     <string name="title_history">History</string>
     <string name="cart">Cart</string>
 
+    <!--stamp-->
+    <string name="stampcard_description">Stamp Card</string>
+    <string name="stamp_earn">Get 1 stamp(s) for any purchase</string>
+    <string name="stamp_from_earn">from</string>
+    <string name="stamp_valid_until">Valid Until</string>
+    <string name="stamp_cash">10.00 USD To 20.00 USD</string>
+    <string name="stamp_date">2020 &#8211; 03 &#8211; 26</string>
+    <!--End stamp-->
+
     <string name="description">Description</string>
     <string name="discount_description">Discount</string>
     <string name="earn_point_card">Earn Point Card</string>
