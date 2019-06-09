@@ -16,46 +16,54 @@
             android:orientation="vertical"
             android:paddingBottom="150dp">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="320dp"
-                android:background="@drawable/food_red"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="320dp"-->
+                <!--android:background="@drawable/food_red"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <com.alexzh.circleimageview.CircleImageView
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/discount"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"/>
+                <!--<com.alexzh.circleimageview.CircleImageView-->
+                    <!--android:layout_width="75dp"-->
+                    <!--android:layout_height="75dp"-->
+                    <!--android:src="@drawable/discount"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="50dp"/>-->
 
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:text="VEMBERS"
-                    android:textColor="#FFFFFF"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    android:layout_centerInParent="true" />
+                <!--<TextView-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="VEMBERS"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_centerInParent="true" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="11dp"
-                    android:layout_marginBottom="17dp"
-                    android:text="10% off"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp" />
-            </RelativeLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_marginStart="16dp"-->
+                    <!--android:layout_marginTop="16dp"-->
+                    <!--android:layout_marginEnd="11dp"-->
+                    <!--android:layout_marginBottom="17dp"-->
+                    <!--android:text="10% off"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="20sp" />-->
+            <!--</RelativeLayout>-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <include layout="@layout/only_discount_card_layout"/>
+
+            </FrameLayout>
             <!--<ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="320dp"

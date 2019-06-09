@@ -15,62 +15,73 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="245dp"
-                android:src="@drawable/loyalty_card"
-                android:contentDescription="@string/app_name"
-                android:background="@drawable/cards_touch_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="10dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="245dp"
-                android:src="@drawable/reward_card"
-                android:contentDescription="@string/app_name"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/cards_touch_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="10dp"/>
+                <include layout="@layout/only_discount_card_layout"/>
 
-            <ImageView
-                android:id="@+id/imgEarnPoint"
-                android:layout_width="match_parent"
-                android:layout_height="245dp"
-                android:src="@drawable/loyalty_card"
-                android:contentDescription="@string/app_name"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/cards_touch_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_discount_card"
+                    android:textColor="#fff"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp"
+                    android:textAlignment="center" />
 
-            <ImageView
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:layout_gravity="bottom"-->
+                    <!--android:foreground="#85000000" />-->
+
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="245dp"
-                android:src="@drawable/loyalty_card"
-                android:contentDescription="@string/app_name"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/cards_touch_selector"
-                android:clickable="true"
-                android:focusable="true"
-                android:elevation="10dp"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <include layout="@layout/only_stamp_card_layout"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/title_stamp_card"-->
+                    <!--android:textColor="#fff"-->
+                    <!--android:layout_gravity="bottom"-->
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Title"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:layout_marginStart="16dp"-->
+                    <!--android:textAlignment="center" />-->
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <include layout="@layout/only_earn_card_layout"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_earn_point"
+                    android:textColor="#fff"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="16dp"
+                    android:textAlignment="center" />
+
+            </FrameLayout>
 
         </LinearLayout>
-
 
     </android.support.v4.widget.NestedScrollView>
 

@@ -19,7 +19,6 @@
 
     <string name="description">Description</string>
     <string name="discount_description">Discount</string>
-    <string name="earn_point_card">Earn Point Card</string>
     <string name="apply_now">Apply Now</string>
     <string name="from">From</string>
     <string name="cash">10.00 USD</string>
@@ -33,4 +32,9 @@
     <string name="cate_iced">Iced</string>
     <string name="cate_frappe">Frappe</string>
     <string name="cate_other">Other</string>
+    <string name="vembers">VEMBERS</string>
+
+    <string name="title_stamp_card">Stamp Card</string>
+    <string name="title_earn_point">Earn Point Card</string>
+    <string name="title_discount_card">Discount Card</string>
 </resources>

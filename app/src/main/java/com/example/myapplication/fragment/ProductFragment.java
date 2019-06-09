@@ -20,6 +20,8 @@ import com.example.myapplication.adapter.ImagePageAdapter;
 import com.example.myapplication.adapter.ProductAdapter;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ProductFragment extends Fragment {
 
@@ -28,6 +30,8 @@ public class ProductFragment extends Fragment {
     ViewPager mViewPager;
     ImagePageAdapter mImgPageAdapter = null;
 
+    private Timer mTimer = null;
+    private TimerTask mTimerTask = null;
     private static final int SPAN_COUNT = 2;
 
     @Nullable
@@ -46,6 +50,30 @@ public class ProductFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        //auto image slide
+        mTimer = new Timer();
+        mTimerTask = new TimerTask() {
+            int item = 0;
+            @Override
+            public void run() {
+                if(item == mImgPageAdapter.getCount()){
+                    item = -1;
+                }
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mViewPager.setCurrentItem(item);
+                    }
+                });
+                item++;
+            }
+        };
+        mTimer.scheduleAtFixedRate(mTimerTask,2000,3000);
+    }
+
     private void setupImageSlide(){
         mImgPageAdapter = new ImagePageAdapter(getFragmentManager(),new ArrayList<Integer>(){{
             add(R.drawable.cafe1);
@@ -61,6 +89,7 @@ public class ProductFragment extends Fragment {
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),SPAN_COUNT);
         gridLayoutManager.setOrientation(GridLayoutManager.VERTICAL);
+        gridLayoutManager.setReverseLayout(false);
         mRvProduct.setLayoutManager(gridLayoutManager);
 
         mProductAdapter = new ProductAdapter();

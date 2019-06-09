@@ -8,8 +8,7 @@ import android.widget.TextView;
 
 import com.example.myapplication.R;
 
-
-public class EarnPointActivity extends AppCompatActivity {
+public class DiscountCardActivity extends AppCompatActivity {
 
     Toolbar mToolBar;
     TextView mTvTitleBar;
@@ -17,7 +16,7 @@ public class EarnPointActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.earn_point_card_layout);
+        setContentView(R.layout.discount_card);
 
         mToolBar = (Toolbar)findViewById(R.id.toolBar);
         mToolBar.setTitle("");
@@ -25,6 +24,6 @@ public class EarnPointActivity extends AppCompatActivity {
         setSupportActionBar(mToolBar);
 
         mTvTitleBar = (TextView)findViewById(R.id.tvTitleBar);
-        mTvTitleBar.setText(getResources().getString(R.string.title_earn_point));
+        mTvTitleBar.setText(getResources().getString(R.string.title_discount_card));
     }
 }

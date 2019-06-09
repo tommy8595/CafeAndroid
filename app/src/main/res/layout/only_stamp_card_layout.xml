@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rlStampCard"
+        android:layout_width="wrap_content"
+        android:layout_height="245dp"
+        android:background="@drawable/food_green"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vembers"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <!--checktop1-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checktop1"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                app:view_backgroundColor="#FFFFFF"
+                android:layout_marginStart="8dp" />
+
+            <!--checktop2-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checktop2"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp" />
+
+            <!--checktop3-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checktop3"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp" />
+
+            <!--checktop4-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checktop4"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/linear1"
+            android:layout_marginTop="20dp">
+
+            <!--checldown1-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checkdown1"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp" />
+
+            <!--checldown2-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checkdown2"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp" />
+
+            <!--checldown3-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checkdown3"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp" />
+
+            <!--checldown4-->
+            <com.alexzh.circleimageview.CircleImageView
+                android:id="@+id/checkdown4"
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@drawable/check1"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</layout>

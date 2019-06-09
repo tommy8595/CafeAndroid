@@ -112,6 +112,19 @@
                 android:textAlignment="center"
                 android:textColorLink="@color/colorBrown"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_product"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:enabled="true"
+                android:textAlignment="center"
+                android:textColor="@color/colorBrown"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/productRecyclerView"
                 android:layout_width="match_parent"
