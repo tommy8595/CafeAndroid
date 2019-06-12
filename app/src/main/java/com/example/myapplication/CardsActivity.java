@@ -11,15 +11,11 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.alexzh.circleimageview.ItemSelectedListener;
-import com.example.myapplication.R;
 import com.example.myapplication.cards.DiscountCardActivity;
 import com.example.myapplication.cards.EarnPointActivity;
-import com.example.myapplication.cards.StampCardActivity;
 
 import java.util.ArrayList;
 import java.util.List;

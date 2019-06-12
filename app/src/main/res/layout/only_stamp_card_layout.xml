@@ -30,42 +30,44 @@
             android:layout_marginTop="50dp">
 
             <!--checktop1-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checktop1"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checktop1"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
-                app:view_backgroundColor="#FFFFFF"
-                android:layout_marginStart="8dp" />
+                app:civ_circle_background_color="#FFFFFF"
+                android:layout_marginStart="8dp"/>
 
             <!--checktop2-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checktop2"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checktop2"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp" />
+                app:civ_circle_background_color="#FFFFFF"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"/>
 
             <!--checktop3-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checktop3"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checktop3"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp" />
+                app:civ_circle_background_color="#FFFFFF"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"/>
 
             <!--checktop4-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checktop4"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checktop4"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
+                app:civ_circle_background_color="#FFFFFF"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"/>
 
         </LinearLayout>
 
@@ -77,41 +79,45 @@
             android:layout_marginTop="20dp">
 
             <!--checldown1-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checkdown1"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checkdown1"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp" />
+                app:civ_circle_background_color="#FFFFFF"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"/>
 
             <!--checldown2-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checkdown2"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checkdoen2"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp" />
+                app:civ_circle_background_color="#FFFFFF"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"/>
 
             <!--checldown3-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checkdown3"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checkdown3"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
-                android:layout_marginStart="8dp" />
+                app:civ_circle_background_color="#FFFFFF"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"/>
 
             <!--checldown4-->
-            <com.alexzh.circleimageview.CircleImageView
-                android:id="@+id/checkdown4"
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="89dp"
                 android:layout_height="82dp"
+                android:id="@+id/checkdown4"
                 android:src="@drawable/check1"
-                android:layout_weight="1"
+                app:civ_circle_background_color="#FFFFFF"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"/>
 
         </LinearLayout>
 
