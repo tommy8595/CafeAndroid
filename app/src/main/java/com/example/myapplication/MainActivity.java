@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity implements OnTabSelectListen
                         .replace(R.id.fragment,mProductFragment)
                         .commit();
                 break;
-
+            case R.id.tabPromotion:
+                Intent test =new Intent(this,Login_Activity.class);
+                startActivity(test);
             default:
                 break;
         }
