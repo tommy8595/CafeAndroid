@@ -23,5 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="200dp"/>
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:text="Sign Out"/>
 
 </RelativeLayout>
