@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,8 +23,9 @@ import com.example.myapplication.adapter.ProductAdapter;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.Executor;
 
-public class ProductFragment extends Fragment {
+public class ProductFragment extends Fragment{
 
     RecyclerView mRvProduct;
     ProductAdapter mProductAdapter;
@@ -50,30 +52,6 @@ public class ProductFragment extends Fragment {
         return rootView;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        //auto image slide
-        mTimer = new Timer();
-        mTimerTask = new TimerTask() {
-            int item = 0;
-            @Override
-            public void run() {
-                if(item == mImgPageAdapter.getCount()){
-                    item = -1;
-                }
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mViewPager.setCurrentItem(item);
-                    }
-                });
-                item++;
-            }
-        };
-        mTimer.scheduleAtFixedRate(mTimerTask,2000,3000);
-    }
-
     private void setupImageSlide(){
         mImgPageAdapter = new ImagePageAdapter(getFragmentManager(),new ArrayList<Integer>(){{
             add(R.drawable.cafe1);
@@ -97,6 +75,36 @@ public class ProductFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        //auto slide
+        try{
+            mTimer = new Timer();
+            mTimerTask = new TimerTask() {
+                int item = 0;
+                @Override
+                public void run() {
+                    if(item == mImgPageAdapter.getCount()){
+                        item = -1;
+                    }
+                    if(getActivity() != null){
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mViewPager.setCurrentItem(item);
+                            }
+                        });
+                        item++;
+                    }
+                }
+            };
+            mTimer.scheduleAtFixedRate(mTimerTask,2000,3000);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
+    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_toolbar,menu);
     }
@@ -108,5 +116,14 @@ public class ProductFragment extends Fragment {
                     .show();
         }
         return true;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mTimer.cancel();
+        mTimerTask.cancel();
+        Thread.currentThread().interrupt();
+        Log.d("TAG","Detach");
     }
 }
