@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Login_Activity extends AppCompatActivity  {
 
@@ -27,6 +32,9 @@ public class Login_Activity extends AppCompatActivity  {
     private EditText password;
     //check user if it alr logging
     private FirebaseAuth.AuthStateListener mAuthListener;
+    //test regex
+    public String Email_Regex="^([^@])+@(hotmail|gmail|yahoo)\\.com";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +87,22 @@ public class Login_Activity extends AppCompatActivity  {
         String e =email.getText().toString();
         String p =password.getText().toString();
 
+
+
         if (TextUtils.isEmpty(e)||TextUtils.isEmpty(p))
         {
             Toast.makeText(this,"Shouldn't leave blank",Toast.LENGTH_SHORT).show();
-        }else
+        }
+        //email verify
+//        else if (!Patterns.EMAIL_ADDRESS.matcher(e).matches())
+//        {
+//            Toast.makeText(this,"Wrong Format Email",Toast.LENGTH_SHORT).show();
+//        }
+        else if (!e.matches(Email_Regex))
+        {
+            Toast.makeText(this,"Wrong Format Email",Toast.LENGTH_SHORT).show();
+        }
+        else
             mAuth.signInWithEmailAndPassword(e,p)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -107,7 +127,13 @@ public class Login_Activity extends AppCompatActivity  {
         if (TextUtils.isEmpty(e)||TextUtils.isEmpty(p))
         {
             Toast.makeText(this,"Shouldn't leave blank",Toast.LENGTH_SHORT).show();
-        }else
+        }
+        //email validated
+        else if (!Patterns.EMAIL_ADDRESS.matcher(e).matches())
+        {
+            Toast.makeText(this,"Wrong Format Email",Toast.LENGTH_SHORT).show();
+        }
+        else
             mAuth.createUserWithEmailAndPassword(e,p)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
