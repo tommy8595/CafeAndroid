@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".BarcodeGenerator">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar_layout"/>
+
+    </FrameLayout>
+
     <TextView
         android:id="@+id/textToGen"
         android:layout_width="match_parent"

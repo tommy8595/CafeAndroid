@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.myapplication.toolbar.CustomToolBar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.zxing.BarcodeFormat;
@@ -62,7 +63,15 @@ public class BarcodeGenerator extends AppCompatActivity {
             }
         });
     }
-////check mel user
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        CustomToolBar.loadCustomerToolBar(BarcodeGenerator.this,"Barcode Generator",
+                getDrawable(R.drawable.ic_left_arrow));
+    }
+
+    ////check mel user
 //    @Override
 //    protected void onStart() {
 //        super.onStart();

@@ -16,8 +16,10 @@ import android.widget.TextView;
 
 import com.example.myapplication.cards.DiscountCardActivity;
 import com.example.myapplication.cards.EarnPointActivity;
+import com.example.myapplication.toolbar.CustomToolBar;
 
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.List;
 
 public class CardsActivity extends AppCompatActivity implements
@@ -37,13 +39,22 @@ public class CardsActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cards_layout);
 
-        mToolBar = (Toolbar) findViewById(R.id.toolBar);
-        mToolBar.setTitle("");
-        mToolBar.setNavigationIcon(R.drawable.ic_cancel);
-        setSupportActionBar(mToolBar);
+//        mToolBar = (Toolbar) findViewById(R.id.toolBar);
+//        mToolBar.setTitle("");
+//        mToolBar.setNavigationIcon(R.drawable.ic_cancel);
+//        setSupportActionBar(mToolBar);
 
-        mTvTitleBar = (TextView)findViewById(R.id.tvTitleBar);
-        mTvTitleBar.setText(getResources().getString(R.string.title_card));
+//        mTvTitleBar = (TextView)findViewById(R.id.tvTitleBar);
+//        mTvTitleBar.setText(getResources().getString(R.string.title_card));
+
+        CustomToolBar.loadCustomerToolBar(CardsActivity.this,getString(R.string.title_card),
+                getDrawable(R.drawable.ic_cancel))
+                .setNavigationOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        finish();
+                    }
+                });
 
         //
         mRlEarnPoint = (RelativeLayout) findViewById(R.id.rlEarnCard);

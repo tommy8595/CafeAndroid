@@ -22,7 +22,7 @@
         android:background="#ccc"
         android:layout_alignParentBottom="true"
         app:bb_tabXmlResource="@xml/bottom_bar_tab"
-        app:bb_activeTabColor="@color/colorBrown">
+        app:bb_activeTabColor="@color/colorPrimaryDark">
 
     </com.roughike.bottombar.BottomBar>
 

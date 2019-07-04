@@ -5,18 +5,21 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.myapplication.fragment.ProductFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity implements OnTabSelectListener {
 
 
     Toolbar mToolBar;
     TextView mTvTitleBar;
-    BottomBar mBottomBar;
+    public BottomBar mBottomBar;
     ProductFragment mProductFragment;
 
     @Override
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements OnTabSelectListen
     public void onTabSelected(int tabId) {
         switch (tabId){
             case R.id.tabCard:
-                Intent cardsIntent = new Intent(this,CardsActivity.class);
+                Intent cardsIntent = new Intent(MainActivity.this,CardsActivity.class);
                 startActivity(cardsIntent);
                 break;
 
@@ -51,13 +54,20 @@ public class MainActivity extends AppCompatActivity implements OnTabSelectListen
                 FragmentManager manager = getSupportFragmentManager();
                 manager.beginTransaction()
                         .replace(R.id.fragment,mProductFragment)
+                        .addToBackStack("")
                         .commit();
                 break;
             case R.id.tabPromotion:
-                Intent test =new Intent(this,Login_Activity.class);
+                Intent test =new Intent(MainActivity.this,Login_Activity.class);
                 startActivity(test);
             default:
                 break;
         }
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mBottomBar.setDefaultTab(R.id.tabProduct);
+        Log.d("TAG","Restart");
     }
 }
