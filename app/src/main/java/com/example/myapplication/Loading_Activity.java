@@ -19,7 +19,7 @@ public class Loading_Activity extends AppCompatActivity {
                     super.run();
                     sleep(1000);  //Delay of 10 seconds
                 } catch (Exception e) {
-
+                    e.printStackTrace();
                 } finally {
 
                     Intent i = new Intent(Loading_Activity.this,
