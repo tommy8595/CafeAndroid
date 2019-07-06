@@ -37,4 +37,8 @@
     <string name="title_stamp_card">Stamp Card</string>
     <string name="title_earn_point">Earn Point Card</string>
     <string name="title_discount_card">Discount Card</string>
+
+    <string name="default_qty_value">1</string>
+    <string name="add_to_cart_text">Add to cart</string>
+    <string name="order_now_text">Order Now</string>
 </resources>
